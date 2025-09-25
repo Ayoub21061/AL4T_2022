@@ -9,9 +9,18 @@ public class Inventory {
         public String getSku() { return sku; }
     }
 
+    // public static boolean hasSku(List<Item> items, String sku) {
+    //     for (Item i : items) {
+    //         if (i.getSku() == sku) {
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
+    
     public static boolean hasSku(List<Item> items, String sku) {
         for (Item i : items) {
-            if (i.getSku() == sku) {
+            if (i.getSku().equals(sku)) {
                 return true;
             }
         }

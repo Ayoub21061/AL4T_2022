@@ -17,12 +17,23 @@ public class NameFormatter {
         public String getLastName() { return lastName; }
     }
 
-    public static String displayName(Person p) {
-        String s = p.getFirstName().trim();
-        if (!p.getMiddleName().isEmpty()) {
-            s += " " + p.getMiddleName().trim();
-        }
-        s += " " + p.getLastName().trim();
-        return s;
+    // public static String displayName(Person p) {
+    //     String s = p.getFirstName().trim();
+    //     if (!p.getMiddleName().isEmpty()) {
+    //         s += " " + p.getMiddleName().trim();
+    //     }
+    //     s += " " + p.getLastName().trim();
+    //     return s;
+    // }
+
+       public static String displayName(Person p) {
+       String s = p.getFirstName().trim();
+       String middle = p.getMiddleName();
+       if (middle != null && !middle.isEmpty()) {
+           s += " " + middle.trim();
+      }
+       s += " " + p.getLastName().trim();
+       return s;
     }
+
 }
