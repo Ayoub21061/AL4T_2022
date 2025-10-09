@@ -19,6 +19,17 @@ public class Main {
     // List<Rectangle> rectangles = new ArrayList<>();
         // rectangles.add(rectangle1);
         // rectangles.add(rectangle2);
+        String hello = "hello";
+        String world = "world";
+        System.out.println(hello + " "  +  world);
+
+        StringBuilder builder = new StringBuilder();
+        for( int i =0; i < 100 ; i++) {
+            builder.append(i);
+        }
+        System.out.println(builder.toString());
+
+
 
     }
 }
