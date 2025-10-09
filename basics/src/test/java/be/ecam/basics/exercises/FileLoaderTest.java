@@ -18,7 +18,7 @@ class FileLoaderTest {
     }
 
     @Test
-    void readsFirstLine() throws IOException {
+    void readsFirstLine() throws IOException { // C'est une checked exception qui veut dire qu'on est obligé de la catcher ou de la propager
         Path tmp = Files.createTempFile("fileloader", ".txt");
         try {
             Files.writeString(tmp, "hello\nworld\n", StandardCharsets.UTF_8);
